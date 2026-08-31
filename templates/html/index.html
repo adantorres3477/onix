@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ONIX — Streetwear Premium</title>
+<meta name="description" content="ONIX. Gorras premium, streetwear y piezas exclusivas de edición limitada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+
+  <div class="header-top">
+    <div class="header-top__inner">
+
+      <a href="#" class="logo" aria-label="ONIX — inicio">
+        <span class="logo__mark">ONIX</span>
+      </a>
+
+      <form class="search" role="search" action="#" method="get">
+        <label class="visually-hidden" for="searchInput">Buscar productos</label>
+        <input type="search" id="searchInput" name="q" placeholder="Buscar gorras, streetwear, accesorios…" autocomplete="off">
+        <button type="submit" aria-label="Buscar">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <ul class="header-actions">
+        <li>
+          <button type="button" class="icon-btn" aria-label="Mi cuenta" data-modal-open="login">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="icon-btn" id="wishlistIconBtn" aria-label="Favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            <data class="badge" id="wishlistCount" value="0">0</data>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="icon-btn" id="cartIconBtn" aria-label="Carrito de compras" aria-controls="cartPanel" aria-expanded="false">
+            <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+            <data class="badge badge--primary" id="cartCount" value="0">0</data>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="icon-btn hamburger" id="menuToggle" aria-label="Abrir menú" aria-controls="primaryNav" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <nav class="primary-nav" id="primaryNav" aria-label="Navegación principal">
+    <ul class="nav-links">
+      <li><a href="#nuevo">NUEVO</a></li>
+      <li class="has-dropdown">
+        <a href="#destacados" aria-expanded="false">GORRAS</a>
+      </li>
+      <li class="has-dropdown">
+        <a href="#destacados" aria-expanded="false">STREETWEAR</a>
+      </li>
+      <li><a href="#destacados">ACCESORIOS</a></li>
+      <li class="has-dropdown">
+        <a href="#limited" aria-expanded="false">COLECCIONES</a>
+      </li>
+      <li><a href="#limited">EXCLUSIVOS</a></li>
+      <li><a href="#destacados" class="nav-sale">SALE</a></li>
+    </ul>
+
+    <ul class="nav-auth">
+      <li>
+        <button type="button" class="nav-auth__link" data-modal-open="login">INICIAR SESIÓN</button>
+      </li>
+      <li>
+        <button type="button" class="nav-auth__btn" data-modal-open="register">REGISTRARSE</button>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="announcement" aria-label="Anuncios de la tienda">
+    <ul class="announcement__track">
+      <li>ENVÍO GRATIS EN COMPRAS +$1,500</li>
+      <li>6 MSI CON TARJETAS PARTICIPANTES</li>
+      <li>NUEVA COLECCIÓN ONIX</li>
+      <li>ENVÍO GRATIS EN COMPRAS +$1,500</li>
+      <li>6 MSI CON TARJETAS PARTICIPANTES</li>
+      <li>NUEVA COLECCIÓN ONIX</li>
+    </ul>
+  </div>
+
+</header>
+
+<main id="nuevo">
+
+  <section class="hero" id="hero" aria-roledescription="carrusel" aria-label="Destacados de temporada">
+
+    <ul class="hero__slides">
+      <li class="hero__slide is-active" style="--slide-img: url('https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=1800&q=80');"></li>
+      <li class="hero__slide" style="--slide-img: url('https://images.unsplash.com/photo-1556306535-38febf6782e7?auto=format&fit=crop&w=1800&q=80');"></li>
+      <li class="hero__slide" style="--slide-img: url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1800&q=80');"></li>
+      <li class="hero__slide" style="--slide-img: url('https://images.unsplash.com/photo-1528701800489-20be9c1a1c1f?auto=format&fit=crop&w=1800&q=80');"></li>
+    </ul>
+
+    <div class="hero__scrim"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-anim="fade">NUEVA COLECCIÓN</p>
+      <h1 class="hero__title" data-anim="rise">DEFINE<br>TU ESTILO.</h1>
+      <p class="hero__desc" data-anim="fade">Gorras, streetwear y piezas exclusivas creadas para quienes no siguen tendencias.</p>
+      <div class="hero__cta" data-anim="fade">
+        <a href="#destacados" class="btn btn--primary">EXPLORAR COLECCIÓN</a>
+        <a href="#limited" class="btn btn--ghost">VER EXCLUSIVOS</a>
+      </div>
+    </div>
+
+    <ol class="hero-indicators" aria-label="Seleccionar slide">
+      <li class="active" tabindex="0" role="button" aria-label="Slide 1" aria-current="true"></li>
+      <li tabindex="0" role="button" aria-label="Slide 2"></li>
+      <li tabindex="0" role="button" aria-label="Slide 3"></li>
+      <li tabindex="0" role="button" aria-label="Slide 4"></li>
+    </ol>
+
+    <button type="button" class="hero__scroll-cue" id="heroScrollCue" aria-label="Bajar a la siguiente sección">
+      <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+    </button>
+  </section>
+
+  <section class="benefits" aria-label="Beneficios de compra">
+    <ul>
+      <li><i class="fa-solid fa-truck-fast" aria-hidden="true"></i><span>Envío en 24–72h</span></li>
+      <li><i class="fa-solid fa-rotate-left" aria-hidden="true"></i><span>Cambios sin costo, 30 días</span></li>
+      <li><i class="fa-solid fa-lock" aria-hidden="true"></i><span>Pago 100% seguro</span></li>
+      <li><i class="fa-solid fa-certificate" aria-hidden="true"></i><span>Piezas de edición limitada</span></li>
+    </ul>
+  </section>
+
+  <section class="categories" aria-labelledby="categories-title">
+    <div class="section-head">
+      <p class="section-head__eyebrow">DIRECTORIO</p>
+      <h2 id="categories-title">EXPLORA ONIX</h2>
+    </div>
+
+    <div class="categories__grid">
+
+      <article class="category-card fade-up">
+        <a href="#destacados">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=900&q=80" alt="Colección de gorras premium ONIX apiladas" loading="lazy">
+            <figcaption>
+              <span>GORRAS</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </figcaption>
+          </figure>
+        </a>
+      </article>
+
+      <article class="category-card fade-up">
+        <a href="#destacados">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=900&q=80" alt="Prendas de streetwear negras sobre modelo urbano" loading="lazy">
+            <figcaption>
+              <span>STREETWEAR</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </figcaption>
+          </figure>
+        </a>
+      </article>
+
+      <article class="category-card fade-up">
+        <a href="#destacados">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=900&q=80" alt="Accesorios urbanos ONIX en primer plano" loading="lazy">
+            <figcaption>
+              <span>ACCESORIOS</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </figcaption>
+          </figure>
+        </a>
+      </article>
+
+      <article class="category-card fade-up">
+        <a href="#limited">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1556306535-38febf6782e7?auto=format&fit=crop&w=900&q=80" alt="Pieza exclusiva de edición limitada ONIX" loading="lazy">
+            <figcaption>
+              <span>EXCLUSIVOS</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </figcaption>
+          </figure>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="featured-products" id="destacados" aria-labelledby="featured-title">
+    <div class="section-head">
+      <p class="section-head__eyebrow">SELECCIÓN ACTUAL</p>
+      <h2 id="featured-title">DESTACADOS</h2>
+    </div>
+
+    <ul class="products-grid" id="productsGrid">
+
+      <li>
+        <article class="product-card fade-up" data-product-id="p1" data-product-name="ONIX Essential Black Cap" data-product-price="1499">
+          <div class="product-card__media">
+            <span class="badge-tag badge-tag--new">NEW</span>
+            <button type="button" class="wishlist-btn" aria-label="Agregar a favoritos" aria-pressed="false">
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            </button>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=700&q=80" alt="ONIX Essential Black Cap, gorra negra minimalista" loading="lazy">
+            </figure>
+          </div>
+          <p class="product-card__category">Gorras</p>
+          <h3 class="product-card__name">ONIX Essential Black Cap</h3>
+          <p class="product-card__price">
+            <del>$1,899.00</del>
+            <data value="1499">$1,499.00</data>
+          </p>
+          <button type="button" class="btn btn--add">AGREGAR AL CARRITO</button>
+        </article>
+      </li>
+
+      <li>
+        <article class="product-card fade-up" data-product-id="p2" data-product-name="ONIX Shadow Signature" data-product-price="1699">
+          <div class="product-card__media">
+            <span class="badge-tag badge-tag--sale">-15%</span>
+            <button type="button" class="wishlist-btn" aria-label="Agregar a favoritos" aria-pressed="false">
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            </button>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=700&q=80" alt="ONIX Shadow Signature, gorra con bordado tonal" loading="lazy">
+            </figure>
+          </div>
+          <p class="product-card__category">Gorras</p>
+          <h3 class="product-card__name">ONIX Shadow Signature</h3>
+          <p class="product-card__price">
+            <del>$1,999.00</del>
+            <data value="1699">$1,699.00</data>
+          </p>
+          <button type="button" class="btn btn--add">AGREGAR AL CARRITO</button>
+        </article>
+      </li>
+
+      <li>
+        <article class="product-card fade-up" data-product-id="p3" data-product-name="ONIX Urban Core" data-product-price="1299">
+          <div class="product-card__media">
+            <button type="button" class="wishlist-btn" aria-label="Agregar a favoritos" aria-pressed="false">
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            </button>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" alt="ONIX Urban Core, sudadera streetwear negra" loading="lazy">
+            </figure>
+          </div>
+          <p class="product-card__category">Streetwear</p>
+          <h3 class="product-card__name">ONIX Urban Core</h3>
+          <p class="product-card__price">
+            <data value="1299">$1,299.00</data>
+          </p>
+          <button type="button" class="btn btn--add">AGREGAR AL CARRITO</button>
+        </article>
+      </li>
+
+      <li>
+        <article class="product-card fade-up" data-product-id="p4" data-product-name="ONIX Limited Red" data-product-price="2299">
+          <div class="product-card__media">
+            <span class="badge-tag badge-tag--new">NEW</span>
+            <button type="button" class="wishlist-btn" aria-label="Agregar a favoritos" aria-pressed="false">
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            </button>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=700&q=80" alt="ONIX Limited Red, gorra edición limitada con detalle rojo" loading="lazy">
+            </figure>
+          </div>
+          <p class="product-card__category">Exclusivos</p>
+          <h3 class="product-card__name">ONIX Limited Red</h3>
+          <p class="product-card__price">
+            <data value="2299">$2,299.00</data>
+          </p>
+          <button type="button" class="btn btn--add">AGREGAR AL CARRITO</button>
+        </article>
+      </li>
+
+      <li>
+        <article class="product-card fade-up" data-product-id="p5" data-product-name="ONIX Premium Street" data-product-price="1899">
+          <div class="product-card__media">
+            <span class="badge-tag badge-tag--sale">-30%</span>
+            <button type="button" class="wishlist-btn" aria-label="Agregar a favoritos" aria-pressed="false">
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            </button>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=700&q=80" alt="ONIX Premium Street, chamarra streetwear premium" loading="lazy">
+            </figure>
+          </div>
+          <p class="product-card__category">Streetwear</p>
+          <h3 class="product-card__name">ONIX Premium Street</h3>
+          <p class="product-card__price">
+            <del>$2,699.00</del>
+            <data value="1899">$1,899.00</data>
+          </p>
+          <button type="button" class="btn btn--add">AGREGAR AL CARRITO</button>
+        </article>
+      </li>
+
+      <li>
+        <article class="product-card fade-up" data-product-id="p6" data-product-name="ONIX Midnight Edition" data-product-price="1599">
+          <div class="product-card__media">
+            <button type="button" class="wishlist-btn" aria-label="Agregar a favoritos" aria-pressed="false">
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            </button>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1556306535-38febf6782e7?auto=format&fit=crop&w=700&q=80" alt="ONIX Midnight Edition, gorra negra con detalle bordado" loading="lazy">
+            </figure>
+          </div>
+          <p class="product-card__category">Gorras</p>
+          <h3 class="product-card__name">ONIX Midnight Edition</h3>
+          <p class="product-card__price">
+            <data value="1599">$1,599.00</data>
+          </p>
+          <button type="button" class="btn btn--add">AGREGAR AL CARRITO</button>
+        </article>
+      </li>
+
+    </ul>
+  </section>
+
+  <section class="collection" id="limited" aria-labelledby="collection-title">
+    <article class="collection__panel">
+      <figure class="collection__figure">
+        <img src="https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6?auto=format&fit=crop&w=1600&q=80" alt="Modelo con pieza de la colección Limited Edition ONIX" loading="lazy">
+      </figure>
+      <div class="collection__text">
+        <p class="section-head__eyebrow section-head__eyebrow--light">COLECCIÓN 003</p>
+        <h2 id="collection-title">LIMITED<br>EDITION</h2>
+        <p>Piezas creadas para quienes buscan algo diferente.</p>
+        <a href="#destacados" class="btn btn--primary">VER COLECCIÓN</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="lookbook" aria-labelledby="lookbook-title">
+    <div class="section-head">
+      <p class="section-head__eyebrow">ASÍ SE LLEVA</p>
+      <h2 id="lookbook-title">LOOKBOOK ONIX</h2>
+    </div>
+
+    <div class="lookbook__grid">
+      <figure class="lookbook__item lookbook__item--tall fade-up">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=80" alt="Modelo urbano usando gorra y chamarra ONIX en la calle" loading="lazy">
+      </figure>
+      <figure class="lookbook__item fade-up">
+        <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&fit=crop&w=800&q=80" alt="Detalle de streetwear negro con accesorios ONIX" loading="lazy">
+      </figure>
+      <figure class="lookbook__item fade-up">
+        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80" alt="Grupo de amigos con prendas urbanas ONIX" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section class="trending" aria-labelledby="trending-title">
+    <div class="section-head section-head--row">
+      <div>
+        <p class="section-head__eyebrow">LO MÁS BUSCADO</p>
+        <h2 id="trending-title">TRENDING NOW</h2>
+      </div>
+      <div class="trending__controls">
+        <button type="button" id="trendingPrev" aria-label="Producto anterior">
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        </button>
+        <button type="button" id="trendingNext" aria-label="Producto siguiente">
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <ul class="trending__track" id="trendingTrack">
+      <li class="trending__item">
+        <article class="product-card">
+          <div class="product-card__media">
+            <figure><img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=600&q=80" alt="ONIX Essential Black Cap en tendencia" loading="lazy"></figure>
+          </div>
+          <p class="product-card__category">Gorras</p>
+          <h3 class="product-card__name">Essential Black Cap</h3>
+          <p class="product-card__price"><data value="1499">$1,499.00</data></p>
+        </article>
+      </li>
+      <li class="trending__item">
+        <article class="product-card">
+          <div class="product-card__media">
+            <figure><img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80" alt="ONIX Limited Red en tendencia" loading="lazy"></figure>
+          </div>
+          <p class="product-card__category">Exclusivos</p>
+          <h3 class="product-card__name">Limited Red</h3>
+          <p class="product-card__price"><data value="2299">$2,299.00</data></p>
+        </article>
+      </li>
+      <li class="trending__item">
+        <article class="product-card">
+          <div class="product-card__media">
+            <figure><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="ONIX Urban Core en tendencia" loading="lazy"></figure>
+          </div>
+          <p class="product-card__category">Streetwear</p>
+          <h3 class="product-card__name">Urban Core</h3>
+          <p class="product-card__price"><data value="1299">$1,299.00</data></p>
+        </article>
+      </li>
+      <li class="trending__item">
+        <article class="product-card">
+          <div class="product-card__media">
+            <figure><img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80" alt="ONIX Shadow Signature en tendencia" loading="lazy"></figure>
+          </div>
+          <p class="product-card__category">Gorras</p>
+          <h3 class="product-card__name">Shadow Signature</h3>
+          <p class="product-card__price"><data value="1699">$1,699.00</data></p>
+        </article>
+      </li>
+      <li class="trending__item">
+        <article class="product-card">
+          <div class="product-card__media">
+            <figure><img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=600&q=80" alt="ONIX Premium Street en tendencia" loading="lazy"></figure>
+          </div>
+          <p class="product-card__category">Streetwear</p>
+          <h3 class="product-card__name">Premium Street</h3>
+          <p class="product-card__price"><data value="1899">$1,899.00</data></p>
+        </article>
+      </li>
+    </ul>
+  </section>
+
+  <section class="newsletter" aria-labelledby="newsletter-title">
+    <p class="section-head__eyebrow section-head__eyebrow--light">MANTENTE CERCA</p>
+    <h2 id="newsletter-title">FORMA PARTE DE ONIX</h2>
+    <p>Recibe lanzamientos, drops exclusivos y promociones antes que nadie.</p>
+
+    <form class="newsletter__form" id="newsletterForm" novalidate>
+      <label class="visually-hidden" for="newsletterEmail">Tu correo electrónico</label>
+      <input type="email" id="newsletterEmail" name="email" placeholder="Tu correo electrónico" required>
+      <button type="submit" class="btn btn--primary">SUSCRIBIRME</button>
+    </form>
+    <p class="newsletter__message" id="newsletterMessage" role="status" aria-live="polite"></p>
+  </section>
+
+</main>
+
+<aside class="help-widget" aria-label="Ayuda">
+  <button type="button" class="help-widget__toggle" id="helpToggle" aria-label="Abrir chat de ayuda" aria-controls="helpPanel" aria-expanded="false">
+    <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
+  </button>
+
+  <div class="help-widget__panel" id="helpPanel" hidden>
+    <div class="help-widget__header">
+      <h3>¿NECESITAS AYUDA?</h3>
+      <button type="button" id="helpClose" aria-label="Cerrar chat de ayuda">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </div>
+    <p>Estamos aquí para ayudarte. Escríbenos y te respondemos en minutos.</p>
+    <a href="#" class="btn btn--primary btn--block">INICIAR CHAT</a>
+  </div>
+</aside>
+
+<div class="toast" id="cartToast" role="status" aria-live="polite"></div>
+
+<div class="modal-overlay" id="authModalOverlay" hidden>
+  <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+
+    <button type="button" class="modal__close" id="authModalClose" aria-label="Cerrar ventana">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+
+    <figure class="auth-modal__media">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="Modelo con prenda streetwear premium ONIX">
+    </figure>
+
+    <div class="auth-modal__content">
+
+      <div class="auth-modal__tabs" role="tablist" aria-label="Acceso a tu cuenta">
+        <button type="button" class="auth-modal__tab is-active" id="loginTabBtn" role="tab" aria-selected="true" aria-controls="loginPanel" data-tab="login">INICIAR SESIÓN</button>
+        <button type="button" class="auth-modal__tab" id="registerTabBtn" role="tab" aria-selected="false" aria-controls="registerPanel" data-tab="register">CREAR CUENTA</button>
+      </div>
+
+      <div class="auth-modal__panel" id="loginPanel" role="tabpanel" aria-labelledby="loginTabBtn">
+        <h2 id="authModalTitle" class="auth-modal__title">BIENVENIDO DE VUELTA</h2>
+        <p class="auth-modal__subtitle">Accede para ver tus pedidos, favoritos y drops exclusivos.</p>
+
+        <form id="loginForm" novalidate>
+          <div class="form-field">
+            <label for="loginEmail">Correo electrónico</label>
+            <input type="email" id="loginEmail" name="email" required autocomplete="email">
+            <p class="form-field__error" data-error-for="loginEmail"></p>
+          </div>
+          <div class="form-field">
+            <label for="loginPassword">Contraseña</label>
+            <input type="password" id="loginPassword" name="password" required minlength="6" autocomplete="current-password">
+            <p class="form-field__error" data-error-for="loginPassword"></p>
+          </div>
+          <div class="form-field form-field--row">
+            <label class="checkbox">
+              <input type="checkbox" name="remember">
+              <span>Recordarme</span>
+            </label>
+            <a href="#" class="form-link">¿Olvidaste tu contraseña?</a>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">ENTRAR</button>
+        </form>
+
+        <p class="auth-modal__switch">¿No tienes cuenta? <button type="button" data-tab="register">Regístrate</button></p>
+      </div>
+
+      <div class="auth-modal__panel" id="registerPanel" role="tabpanel" aria-labelledby="registerTabBtn" hidden>
+        <h2 class="auth-modal__title">CREA TU CUENTA</h2>
+        <p class="auth-modal__subtitle">Únete a ONIX y sé el primero en acceder a los drops.</p>
+
+        <form id="registerForm" novalidate>
+          <div class="form-field">
+            <label for="registerName">Nombre completo</label>
+            <input type="text" id="registerName" name="name" required autocomplete="name">
+            <p class="form-field__error" data-error-for="registerName"></p>
+          </div>
+          <div class="form-field">
+            <label for="registerEmail">Correo electrónico</label>
+            <input type="email" id="registerEmail" name="email" required autocomplete="email">
+            <p class="form-field__error" data-error-for="registerEmail"></p>
+          </div>
+          <div class="form-field">
+            <label for="registerPassword">Contraseña</label>
+            <input type="password" id="registerPassword" name="password" required minlength="6" autocomplete="new-password">
+            <p class="form-field__error" data-error-for="registerPassword"></p>
+          </div>
+          <div class="form-field">
+            <label for="registerPasswordConfirm">Confirmar contraseña</label>
+            <input type="password" id="registerPasswordConfirm" name="passwordConfirm" required minlength="6" autocomplete="new-password">
+            <p class="form-field__error" data-error-for="registerPasswordConfirm"></p>
+          </div>
+          <div class="form-field">
+            <label class="checkbox">
+              <input type="checkbox" name="terms" required>
+              <span>Acepto los <a href="#">términos y condiciones</a></span>
+            </label>
+            <p class="form-field__error" data-error-for="registerTerms"></p>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">CREAR CUENTA</button>
+        </form>
+
+        <p class="auth-modal__switch">¿Ya tienes cuenta? <button type="button" data-tab="login">Inicia sesión</button></p>
+      </div>
+
+      <p class="auth-modal__message" id="authModalMessage" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer__grid">
+
+    <section aria-labelledby="footer-brand">
+      <h3 id="footer-brand" class="logo logo--footer">ONIX</h3>
+      <p>Streetwear premium y piezas de edición limitada, diseñadas para una cultura urbana que marca su propio ritmo.</p>
+      <ul class="social-icons">
+        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest" aria-hidden="true"></i></a></li>
+      </ul>
+    </section>
+
+    <nav aria-labelledby="footer-shop">
+      <h3 id="footer-shop">COMPRAR</h3>
+      <ul>
+        <li><a href="#destacados">Gorras</a></li>
+        <li><a href="#destacados">Streetwear</a></li>
+        <li><a href="#destacados">Accesorios</a></li>
+        <li><a href="#limited">Colecciones</a></li>
+        <li><a href="#destacados">Sale</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-labelledby="footer-help">
+      <h3 id="footer-help">AYUDA</h3>
+      <ul>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Envíos</a></li>
+        <li><a href="#">Cambios y devoluciones</a></li>
+        <li><a href="#">Métodos de pago</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <section aria-labelledby="footer-follow">
+      <h3 id="footer-follow">SÍGUENOS</h3>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Pinterest</a></li>
+      </ul>
+    </section>
+
+  </div>
+
+  <div class="site-footer__bottom">
+    <p>© 2026 ONIX. Todos los derechos reservados.</p>
+    <ul>
+      <li><a href="#">Términos y condiciones</a></li>
+      <li><a href="#">Aviso de privacidad</a></li>
+      <li><a href="#">Política de cookies</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/app.js" defer></script>
+</body>
+</html>
