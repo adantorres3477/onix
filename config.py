@@ -1,13 +1,15 @@
-class config:
-    SECRET_KEY  = "CORRIDOSTUMBADOS"
+class Config:
+    SECRET_KEY = "CORRIDOSTUMBADOS"
     DEBUG = True
-    
-    class DvelopmentConfig(Config):
-        mysql_host = "localhost"
-        mysql_user = "root"
-        mysql_password = "mysql"
-        mysql_database = "onix"
-        
-        config = {
-            "Development": DevelopmentConfig }
-        
+
+
+class DevelopmentConfig(Config):
+    MYSQL_HOST = 'localhost'
+    MYSQL_USER = 'root'
+    MYSQL_PASSWORD = 'mysql'
+    MYSQL_DATABASE = 'onix'
+
+
+config = {
+    "Development": DevelopmentConfig
+}

@@ -1,0 +1,84 @@
+<header class="site-header" id="siteHeader">
+
+    <div class="header-top">
+        <div class="header-top__inner">
+
+            <a href="#" class="logo" aria-label="ONIX — inicio">
+                <span class="logo__mark">ONIX</span>
+            </a>
+
+            <form class="search" role="search" action="#" method="get">
+                <label class="visually-hidden" for="searchInput">Buscar productos</label>
+                <input type="search" id="searchInput" name="q" placeholder="Buscar gorras, streetwear, accesorios…" autocomplete="off">
+                <button type="submit" aria-label="Buscar">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          </button>
+            </form>
+
+            <ul class="header-actions">
+                <li>
+                    <button type="button" class="icon-btn" aria-label="Mi cuenta" data-modal-open="login">
+              <i class="fa-regular fa-user" aria-hidden="true"></i>
+            </button>
+                </li>
+                <li>
+                    <button type="button" class="icon-btn" id="wishlistIconBtn" aria-label="Favoritos">
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              <data class="badge" id="wishlistCount" value="0">0</data>
+            </button>
+                </li>
+                <li>
+                    <button type="button" class="icon-btn" id="cartIconBtn" aria-label="Carrito de compras" aria-controls="cartPanel" aria-expanded="false">
+              <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+              <data class="badge badge--primary" id="cartCount" value="0">0</data>
+            </button>
+                </li>
+                <li>
+                    <button type="button" class="icon-btn hamburger" id="menuToggle" aria-label="Abrir menú" aria-controls="primaryNav" aria-expanded="false">
+              <span></span><span></span><span></span>
+            </button>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <nav class="primary-nav" id="primaryNav" aria-label="Navegación principal">
+        <ul class="nav-links">
+            <li><a href="#nuevo">NUEVO</a></li>
+            <li class="has-dropdown">
+                <a href="#destacados" aria-expanded="false">GORRAS</a>
+            </li>
+            <li class="has-dropdown">
+                <a href="#destacados" aria-expanded="false">STREETWEAR</a>
+            </li>
+            <li><a href="#destacados">ACCESORIOS</a></li>
+            <li class="has-dropdown">
+                <a href="#limited" aria-expanded="false">COLECCIONES</a>
+            </li>
+            <li><a href="#limited">EXCLUSIVOS</a></li>
+            <li><a href="#destacados" class="nav-sale">SALE</a></li>
+        </ul>
+
+        <ul class="nav-auth">
+            <li>
+                <button type="button" class="nav-auth__link" data-modal-open="login">INICIAR SESIÓN</button>
+            </li>
+            <li>
+                <button type="button" class="nav-auth__btn" data-modal-open="register">REGISTRARSE</button>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="announcement" aria-label="Anuncios de la tienda">
+        <ul class="announcement__track">
+            <li>ENVÍO GRATIS EN COMPRAS +$1,500</li>
+            <li>6 MSI CON TARJETAS PARTICIPANTES</li>
+            <li>NUEVA COLECCIÓN ONIX</li>
+            <li>ENVÍO GRATIS EN COMPRAS +$1,500</li>
+            <li>6 MSI CON TARJETAS PARTICIPANTES</li>
+            <li>NUEVA COLECCIÓN ONIX</li>
+        </ul>
+    </div>
+
+</header>

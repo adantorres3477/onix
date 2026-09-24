@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONIX — Streetwear Premium</title>
+    <meta name="description" content="ONIX. Gorras premium, streetwear y piezas exclusivas de edición limitada.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+
+<body>
+    {% include 'components/navbar.html' %}
+
+    <main id="nuevo">
+        {% block contenido %}{% endblock %}
+    </main>
+    {% include 'components/footer.html' %}
+
+
+    <aside class="help-widget" aria-label="Ayuda">
+        <button type="button" class="help-widget__toggle" id="helpToggle" aria-label="Abrir chat de ayuda" aria-controls="helpPanel" aria-expanded="false">
+    <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
+  </button>
+
+        <div class="help-widget__panel" id="helpPanel" hidden>
+            <div class="help-widget__header">
+                <h3>¿NECESITAS AYUDA?</h3>
+                <button type="button" id="helpClose" aria-label="Cerrar chat de ayuda">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+            </div>
+            <p>Estamos aquí para ayudarte. Escríbenos y te respondemos en minutos.</p>
+            <a href="#" class="btn btn--primary btn--block">INICIAR CHAT</a>
+        </div>
+    </aside>
+
+    <div class="toast" id="cartToast" role="status" aria-live="polite"></div>
+
+    <div class="modal-overlay" id="authModalOverlay" hidden>
+        <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+
+            <button type="button" class="modal__close" id="authModalClose" aria-label="Cerrar ventana">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+
+            <figure class="auth-modal__media">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="Modelo con prenda streetwear premium ONIX">
+            </figure>
+
+            <div class="auth-modal__content">
+
+                <div class="auth-modal__tabs" role="tablist" aria-label="Acceso a tu cuenta">
+                    <button type="button" class="auth-modal__tab is-active" id="loginTabBtn" role="tab" aria-selected="true" aria-controls="loginPanel" data-tab="login">INICIAR SESIÓN</button>
+                    <button type="button" class="auth-modal__tab" id="registerTabBtn" role="tab" aria-selected="false" aria-controls="registerPanel" data-tab="register">CREAR CUENTA</button>
+                </div>
+
+                <div class="auth-modal__panel" id="loginPanel" role="tabpanel" aria-labelledby="loginTabBtn">
+                    <h2 id="authModalTitle" class="auth-modal__title">BIENVENIDO DE VUELTA</h2>
+                    <p class="auth-modal__subtitle">Accede para ver tus pedidos, favoritos y drops exclusivos.</p>
+
+                    <form id="loginForm" novalidate>
+                        <div class="form-field">
+                            <label for="loginEmail">Correo electrónico</label>
+                            <input type="email" id="loginEmail" name="email" required autocomplete="email">
+                            <p class="form-field__error" data-error-for="loginEmail"></p>
+                        </div>
+                        <div class="form-field">
+                            <label for="loginPassword">Contraseña</label>
+                            <input type="password" id="loginPassword" name="password" required minlength="6" autocomplete="current-password">
+                            <p class="form-field__error" data-error-for="loginPassword"></p>
+                        </div>
+                        <div class="form-field form-field--row">
+                            <label class="checkbox">
+              <input type="checkbox" name="remember">
+              <span>Recordarme</span>
+            </label>
+                            <a href="#" class="form-link">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--block">ENTRAR</button>
+                    </form>
+
+                    <p class="auth-modal__switch">¿No tienes cuenta? <button type="button" data-tab="register">Regístrate</button></p>
+                </div>
+
+               <div class="auth-modal__panel" id="registerPanel" role="tabpanel" aria-labelledby="registerTabBtn" hidden>
+        <h2 class="auth-modal__title">CREA TU CUENTA</h2>
+        <p class="auth-modal__subtitle">Únete a ONIX y sé el primero en acceder a los drops.</p>
+
+        <form action="{{url_for('signup')}}" method="post" id="registerForm" novalidate>
+          <div class="form-field">
+            <label for="registerName">Nombre completo</label>
+            <input type="text" id="registerName" name="nombre" required autocomplete="name">
+            <p class="form-field__error" data-error-for="registerName"></p>
+          </div>
+          <div class="form-field">
+            <label for="registerEmail">Correo electrónico</label>
+            <input type="email" id="registerEmail" name="correo" required autocomplete="email">
+            <p class="form-field__error" data-error-for="registerEmail"></p>
+          </div>
+          <div class="form-field">
+            <label for="registerPassword">Contraseña</label>
+            <input type="password" id="registerPassword" name="clave" required minlength="6" autocomplete="new-password">
+            <p class="form-field__error" data-error-for="registerPassword"></p>
+          </div>
+          <div class="form-field">
+            <label for="registerPasswordConfirm">Confirmar contraseña</label>
+            <input type="password" id="registerPasswordConfirm" name="passwordConfirm" required minlength="6" autocomplete="new-password">
+            <p class="form-field__error" data-error-for="registerPasswordConfirm"></p>
+          </div>
+          <div class="form-field">
+            <label class="checkbox">
+              <input type="checkbox" name="terms" required>
+              <span>Acepto los <a href="#">términos y condiciones</a></span>
+            </label>
+            <p class="form-field__error" data-error-for="registerTerms"></p>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">CREAR CUENTA</button>
+        </form>
+
+        <p class="auth-modal__switch">¿Ya tienes cuenta? <button type="button" data-tab="login">Inicia sesión</button></p>
+      </div>
+
+      <p class="auth-modal__message" id="authModalMessage" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</div>
+
+
+
+ <script src="/static/js/app.js" defer></script>
+<script src="/static/js/bootstrap.bundle.min.js" defer></script>
+</body>
+
+</html>

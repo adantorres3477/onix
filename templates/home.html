@@ -1,0 +1,356 @@
+{% extends "layout.html" %}
+{% block titulo %}ONIX — Streetwear Premium {%endblock%}
+{% block contenido %}
+<main id="nuevo">
+
+    <section class="hero" id="hero" aria-roledescription="carrusel" aria-label="Destacados de temporada">
+
+        <ul class="hero__slides">
+            <li class="hero__slide is-active" style="--slide-img: url('https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=1800&q=80');"></li>
+            <li class="hero__slide" style="--slide-img: url('https://images.unsplash.com/photo-1556306535-38febf6782e7?auto=format&fit=crop&w=1800&q=80');"></li>
+            <li class="hero__slide" style="--slide-img: url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1800&q=80');"></li>
+            <li class="hero__slide" style="--slide-img: url('https://images.unsplash.com/photo-1528701800489-20be9c1a1c1f?auto=format&fit=crop&w=1800&q=80');"></li>
+        </ul>
+
+        <div class="hero__scrim"></div>
+
+        <div class="hero__content">
+            <p class="hero__eyebrow" data-anim="fade">NUEVA COLECCIÓN</p>
+            <h1 class="hero__title" data-anim="rise">DEFINE<br>TU ESTILO.</h1>
+            <p class="hero__desc" data-anim="fade">Gorras, streetwear y piezas exclusivas creadas para quienes no siguen tendencias.</p>
+            <div class="hero__cta" data-anim="fade">
+                <a href="#destacados" class="btn btn--primary">EXPLORAR COLECCIÓN</a>
+                <a href="#limited" class="btn btn--ghost">VER EXCLUSIVOS</a>
+            </div>
+        </div>
+
+        <ol class="hero-indicators" aria-label="Seleccionar slide">
+            <li class="active" tabindex="0" role="button" aria-label="Slide 1" aria-current="true"></li>
+            <li tabindex="0" role="button" aria-label="Slide 2"></li>
+            <li tabindex="0" role="button" aria-label="Slide 3"></li>
+            <li tabindex="0" role="button" aria-label="Slide 4"></li>
+        </ol>
+
+        <button type="button" class="hero__scroll-cue" id="heroScrollCue" aria-label="Bajar a la siguiente sección">
+        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+      </button>
+    </section>
+
+    <section class="benefits" aria-label="Beneficios de compra">
+        <ul>
+            <li><i class="fa-solid fa-truck-fast" aria-hidden="true"></i><span>Envío en 24–72h</span></li>
+            <li><i class="fa-solid fa-rotate-left" aria-hidden="true"></i><span>Cambios sin costo, 30 días</span></li>
+            <li><i class="fa-solid fa-lock" aria-hidden="true"></i><span>Pago 100% seguro</span></li>
+            <li><i class="fa-solid fa-certificate" aria-hidden="true"></i><span>Piezas de edición limitada</span></li>
+        </ul>
+    </section>
+
+    <section class="categories" aria-labelledby="categories-title">
+        <div class="section-head">
+            <p class="section-head__eyebrow">DIRECTORIO</p>
+            <h2 id="categories-title">EXPLORA ONIX</h2>
+        </div>
+
+        <div class="categories__grid">
+
+            <article class="category-card fade-up">
+                <a href="#destacados">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=900&q=80" alt="Colección de gorras premium ONIX apiladas" loading="lazy">
+                        <figcaption>
+                            <span>GORRAS</span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </figcaption>
+                    </figure>
+                </a>
+            </article>
+
+            <article class="category-card fade-up">
+                <a href="#destacados">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=900&q=80" alt="Prendas de streetwear negras sobre modelo urbano" loading="lazy">
+                        <figcaption>
+                            <span>STREETWEAR</span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </figcaption>
+                    </figure>
+                </a>
+            </article>
+
+            <article class="category-card fade-up">
+                <a href="#destacados">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=900&q=80" alt="Accesorios urbanos ONIX en primer plano" loading="lazy">
+                        <figcaption>
+                            <span>ACCESORIOS</span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </figcaption>
+                    </figure>
+                </a>
+            </article>
+
+            <article class="category-card fade-up">
+                <a href="#limited">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1556306535-38febf6782e7?auto=format&fit=crop&w=900&q=80" alt="Pieza exclusiva de edición limitada ONIX" loading="lazy">
+                        <figcaption>
+                            <span>EXCLUSIVOS</span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </figcaption>
+                    </figure>
+                </a>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="featured-products" id="destacados" aria-labelledby="featured-title">
+        <div class="section-head">
+            <p class="section-head__eyebrow">SELECCIÓN ACTUAL</p>
+            <h2 id="featured-title">DESTACADOS</h2>
+        </div>
+
+        <ul class="products-grid" id="productsGrid">
+
+            <li>
+                <article class="product-card fade-up" data-product-id="p1" data-product-name="ONIX Essential Black Cap" data-product-price="1499">
+                    <div class="product-card__media">
+                        <span class="badge-tag badge-tag--new">NEW</span>
+                        <button type="button" class="wishlist-btn" aria-label="Agregar a favoritos" aria-pressed="false">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=700&q=80" alt="ONIX Essential Black Cap, gorra negra minimalista" loading="lazy">
+                        </figure>
+                    </div>
+                    <p class="product-card__category">Gorras</p>
+                    <h3 class="product-card__name">ONIX Essential Black Cap</h3>
+                    <p class="product-card__price">
+                        <del>$1,899.00</del>
+                        <data value="1499">$1,499.00</data>
+                    </p>
+                    <button type="button" class="btn btn--add">AGREGAR AL CARRITO</button>
+                </article>
+            </li>
+
+            <li>
+                <article class="product-card fade-up" data-product-id="p2" data-product-name="ONIX Shadow Signature" data-product-price="1699">
+                    <div class="product-card__media">
+                        <span class="badge-tag badge-tag--sale">-15%</span>
+                        <button type="button" class="wishlist-btn" aria-label="Agregar a favoritos" aria-pressed="false">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=700&q=80" alt="ONIX Shadow Signature, gorra con bordado tonal" loading="lazy">
+                        </figure>
+                    </div>
+                    <p class="product-card__category">Gorras</p>
+                    <h3 class="product-card__name">ONIX Shadow Signature</h3>
+                    <p class="product-card__price">
+                        <del>$1,999.00</del>
+                        <data value="1699">$1,699.00</data>
+                    </p>
+                    <button type="button" class="btn btn--add">AGREGAR AL CARRITO</button>
+                </article>
+            </li>
+
+            <li>
+                <article class="product-card fade-up" data-product-id="p3" data-product-name="ONIX Urban Core" data-product-price="1299">
+                    <div class="product-card__media">
+                        <button type="button" class="wishlist-btn" aria-label="Agregar a favoritos" aria-pressed="false">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" alt="ONIX Urban Core, sudadera streetwear negra" loading="lazy">
+                        </figure>
+                    </div>
+                    <p class="product-card__category">Streetwear</p>
+                    <h3 class="product-card__name">ONIX Urban Core</h3>
+                    <p class="product-card__price">
+                        <data value="1299">$1,299.00</data>
+                    </p>
+                    <button type="button" class="btn btn--add">AGREGAR AL CARRITO</button>
+                </article>
+            </li>
+
+            <li>
+                <article class="product-card fade-up" data-product-id="p4" data-product-name="ONIX Limited Red" data-product-price="2299">
+                    <div class="product-card__media">
+                        <span class="badge-tag badge-tag--new">NEW</span>
+                        <button type="button" class="wishlist-btn" aria-label="Agregar a favoritos" aria-pressed="false">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=700&q=80" alt="ONIX Limited Red, gorra edición limitada con detalle rojo" loading="lazy">
+                        </figure>
+                    </div>
+                    <p class="product-card__category">Exclusivos</p>
+                    <h3 class="product-card__name">ONIX Limited Red</h3>
+                    <p class="product-card__price">
+                        <data value="2299">$2,299.00</data>
+                    </p>
+                    <button type="button" class="btn btn--add">AGREGAR AL CARRITO</button>
+                </article>
+            </li>
+
+            <li>
+                <article class="product-card fade-up" data-product-id="p5" data-product-name="ONIX Premium Street" data-product-price="1899">
+                    <div class="product-card__media">
+                        <span class="badge-tag badge-tag--sale">-30%</span>
+                        <button type="button" class="wishlist-btn" aria-label="Agregar a favoritos" aria-pressed="false">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=700&q=80" alt="ONIX Premium Street, chamarra streetwear premium" loading="lazy">
+                        </figure>
+                    </div>
+                    <p class="product-card__category">Streetwear</p>
+                    <h3 class="product-card__name">ONIX Premium Street</h3>
+                    <p class="product-card__price">
+                        <del>$2,699.00</del>
+                        <data value="1899">$1,899.00</data>
+                    </p>
+                    <button type="button" class="btn btn--add">AGREGAR AL CARRITO</button>
+                </article>
+            </li>
+
+            <li>
+                <article class="product-card fade-up" data-product-id="p6" data-product-name="ONIX Midnight Edition" data-product-price="1599">
+                    <div class="product-card__media">
+                        <button type="button" class="wishlist-btn" aria-label="Agregar a favoritos" aria-pressed="false">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1556306535-38febf6782e7?auto=format&fit=crop&w=700&q=80" alt="ONIX Midnight Edition, gorra negra con detalle bordado" loading="lazy">
+                        </figure>
+                    </div>
+                    <p class="product-card__category">Gorras</p>
+                    <h3 class="product-card__name">ONIX Midnight Edition</h3>
+                    <p class="product-card__price">
+                        <data value="1599">$1,599.00</data>
+                    </p>
+                    <button type="button" class="btn btn--add">AGREGAR AL CARRITO</button>
+                </article>
+            </li>
+
+        </ul>
+    </section>
+
+    <section class="collection" id="limited" aria-labelledby="collection-title">
+        <article class="collection__panel">
+            <figure class="collection__figure">
+                <img src="https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6?auto=format&fit=crop&w=1600&q=80" alt="Modelo con pieza de la colección Limited Edition ONIX" loading="lazy">
+            </figure>
+            <div class="collection__text">
+                <p class="section-head__eyebrow section-head__eyebrow--light">COLECCIÓN 003</p>
+                <h2 id="collection-title">LIMITED<br>EDITION</h2>
+                <p>Piezas creadas para quienes buscan algo diferente.</p>
+                <a href="#destacados" class="btn btn--primary">VER COLECCIÓN</a>
+            </div>
+        </article>
+    </section>
+
+    <section class="lookbook" aria-labelledby="lookbook-title">
+        <div class="section-head">
+            <p class="section-head__eyebrow">ASÍ SE LLEVA</p>
+            <h2 id="lookbook-title">LOOKBOOK ONIX</h2>
+        </div>
+
+        <div class="lookbook__grid">
+            <figure class="lookbook__item lookbook__item--tall fade-up">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=80" alt="Modelo urbano usando gorra y chamarra ONIX en la calle" loading="lazy">
+            </figure>
+            <figure class="lookbook__item fade-up">
+                <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&fit=crop&w=800&q=80" alt="Detalle de streetwear negro con accesorios ONIX" loading="lazy">
+            </figure>
+            <figure class="lookbook__item fade-up">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80" alt="Grupo de amigos con prendas urbanas ONIX" loading="lazy">
+            </figure>
+        </div>
+    </section>
+
+    <section class="trending" aria-labelledby="trending-title">
+        <div class="section-head section-head--row">
+            <div>
+                <p class="section-head__eyebrow">LO MÁS BUSCADO</p>
+                <h2 id="trending-title">TRENDING NOW</h2>
+            </div>
+            <div class="trending__controls">
+                <button type="button" id="trendingPrev" aria-label="Producto anterior">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+          </button>
+                <button type="button" id="trendingNext" aria-label="Producto siguiente">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+            </div>
+        </div>
+
+        <ul class="trending__track" id="trendingTrack">
+            <li class="trending__item">
+                <article class="product-card">
+                    <div class="product-card__media">
+                        <figure><img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=600&q=80" alt="ONIX Essential Black Cap en tendencia" loading="lazy"></figure>
+                    </div>
+                    <p class="product-card__category">Gorras</p>
+                    <h3 class="product-card__name">Essential Black Cap</h3>
+                    <p class="product-card__price"><data value="1499">$1,499.00</data></p>
+                </article>
+            </li>
+            <li class="trending__item">
+                <article class="product-card">
+                    <div class="product-card__media">
+                        <figure><img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80" alt="ONIX Limited Red en tendencia" loading="lazy"></figure>
+                    </div>
+                    <p class="product-card__category">Exclusivos</p>
+                    <h3 class="product-card__name">Limited Red</h3>
+                    <p class="product-card__price"><data value="2299">$2,299.00</data></p>
+                </article>
+            </li>
+            <li class="trending__item">
+                <article class="product-card">
+                    <div class="product-card__media">
+                        <figure><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="ONIX Urban Core en tendencia" loading="lazy"></figure>
+                    </div>
+                    <p class="product-card__category">Streetwear</p>
+                    <h3 class="product-card__name">Urban Core</h3>
+                    <p class="product-card__price"><data value="1299">$1,299.00</data></p>
+                </article>
+            </li>
+            <li class="trending__item">
+                <article class="product-card">
+                    <div class="product-card__media">
+                        <figure><img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80" alt="ONIX Shadow Signature en tendencia" loading="lazy"></figure>
+                    </div>
+                    <p class="product-card__category">Gorras</p>
+                    <h3 class="product-card__name">Shadow Signature</h3>
+                    <p class="product-card__price"><data value="1699">$1,699.00</data></p>
+                </article>
+            </li>
+            <li class="trending__item">
+                <article class="product-card">
+                    <div class="product-card__media">
+                        <figure><img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=600&q=80" alt="ONIX Premium Street en tendencia" loading="lazy"></figure>
+                    </div>
+                    <p class="product-card__category">Streetwear</p>
+                    <h3 class="product-card__name">Premium Street</h3>
+                    <p class="product-card__price"><data value="1899">$1,899.00</data></p>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section class="newsletter" aria-labelledby="newsletter-title">
+        <p class="section-head__eyebrow section-head__eyebrow--light">MANTENTE CERCA</p>
+        <h2 id="newsletter-title">FORMA PARTE DE ONIX</h2>
+        <p>Recibe lanzamientos, drops exclusivos y promociones antes que nadie.</p>
+
+        <form class="newsletter__form" id="newsletterForm" novalidate>
+            <label class="visually-hidden" for="newsletterEmail">Tu correo electrónico</label>
+            <input type="email" id="newsletterEmail" name="email" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="btn btn--primary">SUSCRIBIRME</button>
+        </form>
+        <p class="newsletter__message" id="newsletterMessage" role="status" aria-live="polite"></p>
+    </section>
+
+</main>
+{%endblock%}

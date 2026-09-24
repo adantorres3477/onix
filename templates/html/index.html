@@ -9,7 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="/static/css/styles.css">
+<link rel="stylesheet" href="/static/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -520,20 +521,20 @@
         <h2 class="auth-modal__title">CREA TU CUENTA</h2>
         <p class="auth-modal__subtitle">Únete a ONIX y sé el primero en acceder a los drops.</p>
 
-        <form id="registerForm" novalidate>
+        <form action="{{url_for('signup')}}" method="post" id="registerForm" novalidate>
           <div class="form-field">
             <label for="registerName">Nombre completo</label>
-            <input type="text" id="registerName" name="name" required autocomplete="name">
+            <input type="text" id="registerName" name="nombre" required autocomplete="name">
             <p class="form-field__error" data-error-for="registerName"></p>
           </div>
           <div class="form-field">
             <label for="registerEmail">Correo electrónico</label>
-            <input type="email" id="registerEmail" name="email" required autocomplete="email">
+            <input type="email" id="registerEmail" name="correo" required autocomplete="email">
             <p class="form-field__error" data-error-for="registerEmail"></p>
           </div>
           <div class="form-field">
             <label for="registerPassword">Contraseña</label>
-            <input type="password" id="registerPassword" name="password" required minlength="6" autocomplete="new-password">
+            <input type="password" id="registerPassword" name="clave" required minlength="6" autocomplete="new-password">
             <p class="form-field__error" data-error-for="registerPassword"></p>
           </div>
           <div class="form-field">
@@ -617,6 +618,7 @@
   </div>
 </footer>
 
-<script src="js/app.js" defer></script>
+<script src="/static/js/app.js" defer></script>
+<script src="/static/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
