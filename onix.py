@@ -32,6 +32,35 @@ def signup():
         else :
             return render_template('home.html')
 
+@onixApp.route('/signout',methods=['GET','POST'])
+def signout();
+    logout_user()
+    return redirect(url_for('home'))
+
+@onixApp.route('/home_admin',methods=['GET', 'POST'])
+def home_admin():
+    return render_template('admin.html')
+
+@onixApp.route('/home_admin',methods=['GET', 'POST'])
+def home_user():
+    return render_template('user.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 if __name__ == "__main__":
     onixApp.run(port=5050, debug=True)

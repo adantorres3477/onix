@@ -3,7 +3,7 @@
     <div class="header-top">
         <div class="header-top__inner">
 
-            <a href="#" class="logo" aria-label="ONIX — inicio">
+            <a href="{{url_for('home')}}" class="logo" aria-label="ONIX — inicio">
                 <span class="logo__mark">ONIX</span>
             </a>
 
@@ -58,14 +58,15 @@
             </li>
             <li><a href="#limited">EXCLUSIVOS</a></li>
             <li><a href="#destacados" class="nav-sale">SALE</a></li>
+           
         </ul>
 
         <ul class="nav-auth">
             <li>
-                <button type="button" class="nav-auth__link" data-modal-open="login">INICIAR SESIÓN</button>
+                <a class="nav-auth__link" ="login" type="buton">{{current_user.nombre}}</a>
             </li>
             <li>
-                <button type="button" class="nav-auth__btn" data-modal-open="register">REGISTRARSE</button>
+                <a type="button" class="nav-auth__btn" type="button" href="{{url_for('signout')}}">Cerrarsesion</a>
             </li>
         </ul>
     </nav>
