@@ -15,12 +15,18 @@
 </head>
 
 <body>
-    {% include 'components/navbar.html' %}
-
-    <main id="nuevo">
+{% if current_user.is_authenticated and current_user.perfil == 'A' %}
+        {% include 'components/navbar_admin.html' %}
+{% elif current_user.is_authenticated and current_user.perfil == 'U' %}
+        {% include 'components/navbar_user.html' %}
+{% else %}
+        {% include 'components/navbar_guest.html' %}
+{% endif %}
+ 
+    <main id="contenido">
         {% block contenido %}{% endblock %}
     </main>
-    {% include 'components/footer.html' %}
+   
 
 
     <aside class="help-widget" aria-label="Ayuda">
@@ -65,6 +71,16 @@
                     <p class="auth-modal__subtitle">Accede para ver tus pedidos, favoritos y drops exclusivos.</p>
 
                     <form id="loginForm" novalidate>
+                      {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+   <div class="alert alert-danger" role="alert">
+      {{ message }}
+    </div>
+</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
                         <div class="form-field">
                             <label for="loginEmail">Correo electrónico</label>
                             <input type="email" id="loginEmail" name="email" required autocomplete="email">

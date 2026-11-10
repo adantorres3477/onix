@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, flash, render_template, request, redirect, url_for
 from flask_mysqldb import MySQL
 from flask_login import LoginManager , login_user, login_required, current_user, logout_user
 from config import config
@@ -42,15 +42,21 @@ def home_admin():
 
 @onixApp.route('/home_admin',methods=['GET', 'POST'])
 def home_user():
+    if __current_usuario.perfil == 'A' :
+            selUsuario = db.connection.cursor()
+            selUsuario.execute("SELECT * FROM usuario")
+            u=selUsuario.fetchall()
+            selUsuario.close()
+            return render_template('users.html', usuarios=u)
+        else:
+            flash('No tienes permisos para acceder a esta página')
+            return redirect(url_for('home'))
+    
+    
+    
     return render_template('user.html')
 
-
-
-
-
-
-
-
+    
 
 
 
